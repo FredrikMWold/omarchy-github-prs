@@ -5,6 +5,16 @@ from the configured repositories. Drafts and the configured label filters
 remain excluded. Click a row to open its pull request, use arrow keys and
 Enter to navigate, and press R to refresh.
 
+## Install
+
+```sh
+omarchy plugin add https://github.com/FredrikMWold/omarchy-github-prs.git --enable
+```
+
+The repository root contains `manifest.json` and is installed at
+`~/.config/omarchy/plugins/fredrik.github-prs`. The `gh` CLI must be installed
+and authenticated. Update with `omarchy plugin update fredrik.github-prs`.
+
 ## Choosing repositories
 
 Click the gear in the picker header, or press **,**, to open the repository
@@ -55,11 +65,11 @@ Successful refreshes are cached in
 an error and preserve the previous results.
 
 Plugin settings: `myRepositories`, `reviewRepositories`, `filter`, and
-`refreshMinutes`. This machine-local source is installed through the existing
-`~/.config/omarchy/plugins/fredrik.github-prs` symlink.
+`refreshMinutes`. Settings and repository selections remain machine-local;
+they are not stored in this plugin repository.
 
 Run the data and presentation helper tests with:
 
 ```sh
-node --test ~/omarchy-plugins/fredrik.github-prs/test_*.cjs
+node --test ~/.config/omarchy/plugins/fredrik.github-prs/test_*.cjs
 ```

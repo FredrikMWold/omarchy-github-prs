@@ -4,6 +4,7 @@
   "name": "GitHub pull requests",
   "version": "1.0.0",
   "author": "Fredrik",
+  "homepage": "https://github.com/FredrikMWold/omarchy-github-prs",
   "description": "Shows configured GitHub pull requests and opens a native picker",
   "kinds": ["bar-widget"],
   "entryPoints": {
